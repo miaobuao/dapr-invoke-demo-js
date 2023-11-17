@@ -29,10 +29,10 @@ server.invoker.listen(
   "say-hi",
   (data) => {
     console.log(data);
-    return JSON.stringify({
+    return {
       status: 200,
       msg: "hi",
-    });
+    };
   },
   {
     method: HttpMethod.POST,

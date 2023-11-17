@@ -1,10 +1,9 @@
 {
   "name": "test-dapr",
   "version": "1.0.0",
-  "description": "",
   "type": "module",
   "scripts": {
-    "dev": "concurrently --kill-others \"npm:dev:server\" \"npm:dev:client\"",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:server": "dapr run --app-id server --app-protocol grpc --app-port 50052 --dapr-grpc-port 50055 -- nodemon src/server.js",
     "dev:client": "dapr run --app-id client --app-protocol grpc -- nodemon src/client.js"
   },
